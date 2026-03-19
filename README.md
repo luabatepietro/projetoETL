@@ -7,8 +7,7 @@
 
 ## Uso de IA Generativa
 
-Este projeto foi desenvolvido **com auxílio do Claude (Anthropic)** como ferramenta de suporte ao desenvolvimento. A IA foi utilizada nas seguintes etapas:
-
+Este projeto foi desenvolvido **com auxílio do Claude (Anthropic)** como ferramenta de suporte ao desenvolvimento.
 Todo o código gerado foi **revisado, compreendido e validado** pelo autor antes de ser incorporado ao projeto.
 
 ---
