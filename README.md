@@ -5,13 +5,6 @@
 
 ---
 
-## Uso de IA Generativa
-
-Este projeto foi desenvolvido **com auxílio do Claude (Anthropic)** como ferramenta de suporte ao desenvolvimento.
-Todo o código gerado foi **revisado, compreendido e validado** pelo autor antes de ser incorporado ao projeto.
-
----
-
 ## Descrição do Projeto
 
 Pipeline ETL que lê dois arquivos CSV (`order.csv` e `order_item.csv`), aplica filtros e transformações funcionais usando o paradigma de **Programação Funcional em F#**, e gera dois arquivos CSV de saída:
@@ -25,25 +18,23 @@ Pipeline ETL que lê dois arquivos CSV (`order.csv` e `order_item.csv`), aplica 
 
 ```
 projetoETL/
-├── EtlProject.sln              # Solution — agrupa projeto principal e testes
-├── EtlProject/                 # Projeto principal ETL
+├── EtlProject.sln              
+├── EtlProject/                
 │   ├── .devcontainer/
-│   │   └── devcontainer.json   # Ambiente Docker para Codespaces
-│   ├── EtlProject.fsproj       # Projeto .NET — define ordem de compilação
-│   ├── Types.fs                # Records: Order, OrderItem, OrderJoined, OrderSummary, MonthlyAverage
-│   ├── Transform.fs            # Funções PURAS: parse, filter, join, fold, map
-│   ├── Extract.fs              # Funções IMPURAS: leitura de arquivo CSV
-│   ├── Load.fs                 # Funções IMPURAS: escrita dos CSVs de saída
-│   ├── Program.fs              # Ponto de entrada e rotina principal
-│   ├── order.csv               # Dados de entrada — pedidos
-│   └── order_item.csv          # Dados de entrada — itens dos pedidos
-└── EtlProject.Tests/           # Projeto de testes
+│   │   └── devcontainer.json  
+│   ├── EtlProject.fsproj      
+│   ├── Types.fs               
+│   ├── Transform.fs            
+│   ├── Extract.fs              
+│   ├── Load.fs                 
+│   ├── Program.fs              
+│   ├── order.csv               
+│   └── order_item.csv          
+└── EtlProject.Tests/           
     ├── EtlProject.Tests.fsproj
-    ├── TransformTests.fs        # 23 testes das funções puras com Expecto
-    └── Program.fs              # Entry point do runner de testes
+    ├── TransformTests.fs        
+    └── Program.fs              
 ```
-
-A ordem dos arquivos no `.fsproj` é obrigatória em F#: cada arquivo só pode referenciar definições de arquivos declarados antes dele.
 
 ---
 
@@ -135,3 +126,8 @@ let origin = "O"          // "O" (online) ou "P" (physical)
 - [x] **Saída adicional por mês/ano** — `Transform.buildMonthlyAverages` gera `output_monthly.csv` com médias agrupadas
 - [x] **Docstrings em todas as funções** — todas as funções de `Transform.fs` documentadas no formato XML docstring
 - [x] **Testes completos para funções puras** — 23 testes cobrindo todas as funções puras com a biblioteca Expecto
+
+## Uso de IA Generativa
+
+Em algumas etapas do desenvolvimento, esse projeto contou com o auxilio de IA's generativas (Claude) para revisar código, criação do ReadMe, além de uma grande ajuda na cobertura de testes.
+---

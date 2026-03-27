@@ -8,7 +8,7 @@ open Load
 let main argv =
     // --- Parâmetros configuráveis ---
     let status = "Complete"
-    let origin = "O"        // O = Online, P = Physical
+    let origin = "O"        
     let outputPath        = "output.csv"
     let outputMonthlyPath = "output_monthly.csv"
 
